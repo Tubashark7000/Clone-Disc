@@ -1,4 +1,6 @@
-# Conversa — salas de voz, câmera e compartilhamento de tela
+Feito no Claude!
+
+# Voidisce — salas de voz, câmera e compartilhamento de tela
 
 ## Rodar (desenvolvimento)
 ```bash
