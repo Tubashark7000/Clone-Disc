@@ -1,7 +1,7 @@
 # Blueprint do Render: um único serviço web (servidor + cliente compilado).
 services:
   - type: web
-    name: conversa
+    name: voidisce
     runtime: node
     plan: free
     buildCommand: npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install
