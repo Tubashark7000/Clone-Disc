@@ -15,7 +15,7 @@ const { spawn } = require("node:child_process");
 
 const isPortable = () => process.platform === "win32" && !!process.env.PORTABLE_EXECUTABLE_FILE;
 const isSupported = () => process.platform === "win32" && app.isPackaged;
-const workDir = () => path.join(os.tmpdir(), "conversa-update");
+const workDir = () => path.join(os.tmpdir(), "voidisce-update");
 
 function parseVersion(v) {
   const m = /^v?(\d+)\.(\d+)\.(\d+)/.exec(String(v ?? "").trim());
@@ -143,7 +143,7 @@ function createUpdater({ getBaseUrl, onChange }) {
   async function download(info) {
     const dest = isPortable()
       ? `${process.env.PORTABLE_EXECUTABLE_FILE}.update`
-      : path.join(workDir(), `Conversa-Setup-${info.version}.exe`);
+      : path.join(workDir(), `Voidisce-Setup-${info.version}.exe`);
     fs.mkdirSync(path.dirname(dest), { recursive: true });
 
     state.downloading = true;
