@@ -501,7 +501,7 @@ function createWindow() {
     height: 800,
     minWidth: 900,
     minHeight: 560,
-    title: "Conversa",
+    title: "Voidisce",
     backgroundColor: BG,
     autoHideMenuBar: true,
     icon: ICON,
