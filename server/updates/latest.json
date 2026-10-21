@@ -1,0 +1,14 @@
+{
+  "version": "1.0.2",
+  "releasedAt": "2026-10-21T01:19:16.928Z",
+  "setup": {
+    "url": "https://github.com/Tubashark7000/Clone-Disc/releases/tag/1.0.1/Voidisce-Setup-1.0.2.exe",
+    "sha512": "8FJ/FBysH5UdhmnTpHMyz77Sl+bR9oCVfGNeB3IwKvtzFybIzVbdikjlOoCWGW4ipKc2QjkuJqIiQr+3cRAcJw==",
+    "size": 80172697
+  },
+  "portable": {
+    "url": "https://github.com/Tubashark7000/Clone-Disc/releases/tag/1.0.1/Voidisce-Portable-1.0.2.exe",
+    "sha512": "oBgPKmiF5vHU977aSclDmq9sRMCbcY7UxdRjTgGwCGsuau8vpfxRibftUp8/J434fA2xjY2sU5iSky3PGAH19g==",
+    "size": 79944038
+  }
+}
