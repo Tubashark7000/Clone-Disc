@@ -54,8 +54,8 @@ if (!has("no-build")) {
 }
 
 // 3) confere os arquivos gerados
-const setupName = `Conversa-Setup-${version}.exe`;
-const portableBuilt = "Conversa-Portable.exe";
+const setupName = `Voidisce-Setup-${version}.exe`;
+const portableBuilt = "Voidisce-Portable.exe";
 const setupFile = path.join(distDir, setupName);
 const portableFile = path.join(distDir, portableBuilt);
 for (const f of [setupFile, portableFile]) {
@@ -72,13 +72,13 @@ const describe = (file, publishedName) => {
   };
 };
 const setup = describe(setupFile, setupName);
-const portable = describe(portableFile, `Conversa-Portable-${version}.exe`);
+const portable = describe(portableFile, `Voidisce-Portable-${version}.exe`);
 
 // 4) publica em server/updates
 const baseUrl = (value("base-url") ?? "").replace(/\/+$/, "");
 fs.mkdirSync(updatesDir, { recursive: true });
 for (const f of fs.readdirSync(updatesDir)) {
-  if (/^Conversa-.*\.exe$/i.test(f)) fs.rmSync(path.join(updatesDir, f), { force: true }); // apaga versões antigas
+  if (/^Voidisce-.*\.exe$/i.test(f)) fs.rmSync(path.join(updatesDir, f), { force: true }); // apaga versões antigas
 }
 if (!baseUrl) {
   fs.copyFileSync(setup.file, path.join(updatesDir, setup.name));
