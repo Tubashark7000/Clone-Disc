@@ -378,7 +378,7 @@ function startUpdateChecks() {
     notifiedVersion = result.info.version;
     if (Notification.isSupported()) {
       const n = new Notification({
-        title: "Nova versão do Conversa",
+        title: "Nova versão do Voidisce",
         body: `A versão ${result.info.version} está disponível. Clique para atualizar.`,
         icon: ICON,
       });
@@ -438,12 +438,12 @@ function refreshTray() {
   tray.setImage(muted ? trayImages.muted : trayImages.normal);
   tray.setToolTip(
     u.downloading
-      ? `Conversa — baixando atualização ${Math.round(u.progress * 100)}%`
+      ? `Voidisce — baixando atualização ${Math.round(u.progress * 100)}%`
       : muted
-        ? "Conversa — microfone silenciado"
+        ? "Voidisce — microfone silenciado"
         : inCall
-          ? "Conversa — em chamada"
-          : "Conversa"
+          ? "Voidisce — em chamada"
+          : "Voidisce"
   );
   tray.setContextMenu(
     Menu.buildFromTemplate([
