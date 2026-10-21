@@ -11,7 +11,7 @@ const dbg = (...a) => DEBUG && console.log("[captura]", ...a);
 const PLACEHOLDER = "SEU-APP";
 const BG = "#282a2f";
 const ICON = path.join(__dirname, "build", "icon.png");
-const APP_ID = "com.conversa.desktop";
+const APP_ID = "com.voidisce.desktop";
 
 // Captura no Windows (Chromium). Há dois capturadores: a API nova (WGC) e o clássico (DXGI/GDI).
 // Em alguns PCs o Windows nega a API nova ("CreateForMonitor failed ... -2147024891") e a captura
@@ -183,7 +183,7 @@ async function pickSource(parent, request) {
     const picker = new BrowserWindow({
       parent,
       modal: true,
-      width: 760,
+      width: 1000,
       height: 560,
       minWidth: 560,
       minHeight: 420,
