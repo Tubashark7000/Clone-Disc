@@ -1,0 +1,12 @@
+# Blueprint do Render: um único serviço web (servidor + cliente compilado).
+services:
+  - type: web
+    name: conversa
+    runtime: node
+    plan: free
+    buildCommand: npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install
+    startCommand: node server/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

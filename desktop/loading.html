@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'self'" />
+    <title>Conversa</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body { display: grid; place-items: center; background: #282a2f; color: #e7e9ee; font-family: system-ui, "Segoe UI", Roboto, sans-serif; }
+      main { width: min(420px, 90vw); text-align: center; }
+      h1 { font-size: 20px; font-weight: 600; margin: 20px 0 8px; }
+      p { margin: 0 0 8px; color: #9aa0ab; line-height: 1.5; font-size: 14px; }
+      code { background: #34373d; padding: 1px 6px; border-radius: 4px; color: #e7e9ee; }
+      .spinner { width: 36px; height: 36px; margin: 0 auto; border-radius: 50%; border: 3px solid #34373d; border-top-color: #6d6ff5; animation: spin 0.9s linear infinite; }
+      button { margin-top: 16px; background: #6d6ff5; color: #fff; border: 0; border-radius: 6px; padding: 9px 22px; font-size: 14px; font-weight: 500; cursor: pointer; }
+      button:hover { filter: brightness(1.1); }
+      button:focus-visible { outline: 2px solid #e7e9ee; outline-offset: 2px; }
+      [hidden] { display: none !important; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 3s; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="spinner" class="spinner" role="status" aria-label="Carregando"></div>
+      <h1 id="title">Conectando…</h1>
+      <p id="text"></p>
+      <p id="timer" hidden></p>
+      <button id="retry" hidden>Tentar de novo</button>
+    </main>
+    <script src="loading.js"></script>
+  </body>
+</html>

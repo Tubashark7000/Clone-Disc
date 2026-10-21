@@ -1,0 +1,45 @@
+{
+  "name": "conversa-desktop",
+  "version": "1.0.0",
+  "description": "Conversa — salas de voz, câmera e compartilhamento de tela",
+  "main": "main.js",
+  "private": true,
+  "author": "Conversa",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "debug": "electron . --debug",
+    "dist": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "release": "node scripts/release.js"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.conversa.desktop",
+    "productName": "Conversa",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "Conversa-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "Conversa-Portable.exe"
+    },
+    "files": [
+      "**/*",
+      "build/**/*",
+      "!scripts/**"
+    ]
+  }
+}
