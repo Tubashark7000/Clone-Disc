@@ -1,10 +1,10 @@
 {
-  "name": "conversa-desktop",
+  "name": "voidisce-desktop",
   "version": "1.0.0",
-  "description": "Conversa — salas de voz, câmera e compartilhamento de tela",
+  "description": "Voidisce — salas de voz, câmera e compartilhamento de tela",
   "main": "main.js",
   "private": true,
-  "author": "Conversa",
+  "author": "Voidisce",
   "scripts": {
     "start": "electron .",
     "dev": "electron . --dev",
@@ -18,8 +18,8 @@
     "electron-builder": "^26.0.0"
   },
   "build": {
-    "appId": "com.conversa.desktop",
-    "productName": "Conversa",
+    "appId": "com.Voidisce.desktop",
+    "productName": "Voidisce",
     "directories": {
       "output": "dist"
     },
@@ -31,10 +31,10 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "artifactName": "Conversa-Setup-${version}.exe"
+      "artifactName": "Voidisce-Setup-${version}.exe"
     },
     "portable": {
-      "artifactName": "Conversa-Portable.exe"
+      "artifactName": "Voidisce-Portable.exe"
     },
     "files": [
       "**/*",
